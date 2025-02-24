@@ -9,6 +9,11 @@ import torchvision.transforms as transforms  # Görüntü dönüşümleri için
 from torch.utils.data import Dataset, DataLoader  # Veri yükleme ve yönetimi için
 import matplotlib.pyplot as plt  # Görselleştirme için Matplotlib kütüphanesi
 
+# Bu projede düşük çözünürlüklü görüntüleri yüksek çözünürlüklü hale getiren bir derin öğrenme modeli geliştirdim. 
+# İlk olarak yüksek ve düşük çözünürlüklü görüntüleri yükleyen bir veri seti sınıfı oluşturdum.
+# Sonrasında basit bir CNN modeli tasarlayarak görüntüleri eğittim.
+# Modeli eğitirken MSE kayıp fonksiyonu ve Adam optimizasyonunu kullandım.
+# Eğitimden sonra tahmin edilen yüksek çözünürlüklü görüntüleri gerçek görüntülerle karşılaştırarak sonuçları görselleştirdim.
 
 # Bu sınıfı yüksek çözünürlüklü ve alçak çözünürlüklü görüntüleri yüklemek için kullandık
 class ImageDataset(Dataset):
