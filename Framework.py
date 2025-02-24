@@ -9,6 +9,11 @@ import torchvision.transforms as transforms  # görüntü dönüştürmeleri iç
 from torch.utils.data import Dataset, DataLoader  # veri seti ve veri yükleyici için gerekli bileşenleri ekliyorum
 import matplotlib.pyplot as plt  # görselleştirme için matplotlib kütüphanesini ekliyorum
 
+# Bu kod görüntü iyileştirme için bir framework oluşturuyor.
+# Yüksek çözünürlüklü ve düşük çözünürlüklü görüntüleri kullanarak model eğitiyor.
+# Eğitilen modelin performansını PSNR ve SSIM gibi metriklerle değerlendiriyor.
+# Sonuçları görselleştirerek tahminlerin ne kadar doğru olduğunu gösteriyor.
+
 # Görüntü Veri Seti Sınıfı
 class ResimVeriSeti(Dataset):  # Dataset sınıfından türeyen ResimVeriSeti adında bir sınıf oluşturuyorum
     def __init__(self, klasor):  # sınıfın yapıcısı
